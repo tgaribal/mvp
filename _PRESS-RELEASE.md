@@ -18,21 +18,27 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  iVote California App
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  This app is for any voters in the state of California, they will be able to look up their polling place, as well as state wide ballot initiatives
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+
 ## Problem ##
   > Describe the problem your product solves.
+  There is a lot of information and a lot of things at stake in this years election, so people need to have a simple place to get quick view of all candidates and initiatives
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  It makes everything in one location, easily searchable, and full of useful info and links to outside resources
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  
 
 ## How to Get Started ##
   > Describe how easy it is to get started.

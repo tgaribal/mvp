@@ -1,0 +1,10 @@
+"use strict";
+
+var NavEntry = function NavEntry(props) {
+	return React.createElement(
+		"div",
+		{ className: "navEntry" },
+		props.initiatives.level
+	);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvbmF2RW50cnkuanN4Il0sIm5hbWVzIjpbIk5hdkVudHJ5IiwicHJvcHMiLCJpbml0aWF0aXZlcyIsImxldmVsIl0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLFdBQVcsU0FBWEEsUUFBVyxDQUFDQyxLQUFEO0FBQUEsUUFDZDtBQUFBO0FBQUEsSUFBSyxXQUFZLFVBQWpCO0FBQTZCQSxRQUFNQyxXQUFOLENBQWtCQztBQUEvQyxFQURjO0FBQUEsQ0FBZiIsImZpbGUiOiJuYXZFbnRyeS5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBOYXZFbnRyeSA9IChwcm9wcykgPT4gKFxuXHQ8ZGl2IGNsYXNzTmFtZSA9IFwibmF2RW50cnlcIj57cHJvcHMuaW5pdGlhdGl2ZXMubGV2ZWx9PC9kaXY+XG4pOyJdfQ==

@@ -1,0 +1,104 @@
+'use strict';
+
+window.initiatives = [{
+	name: 'President of the  United States of America',
+	description: 'It\'s the presidency yall',
+	choices: ['Hilary Clinton/Tim Kaine', 'Donald Trump/Mike Pence', 'Jill Stein/Ajamu Baraka', 'Gary Johnson/Bill Weld', 'Gloria Estela La Riva/Dennis J. Banks'],
+	level: 'Federal'
+}, {
+	name: 'US Senate',
+	description: 'There is no incumbent with the retirement of Barbara Boxer',
+	choices: ['Kamala Harris', 'Loretta Sanchez'],
+	level: 'Federal'
+}, {
+	name: 'US House of Representatives: 12th District',
+	description: 'Vote for the US Representative from California\'s 12th Congressional District',
+	choices: ['Nancy Pelosi', 'Preston Picus'],
+	level: 'Federal'
+}, {
+	name: 'Proposition 51',
+	description: '$9 billion in bonds for education and schools',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 52',
+	description: 'Voter approval of changes to the hospital fee program',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 53',
+	description: 'Projects that cost more than $2 billion',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 54',
+	description: 'Conditions under which legislative bills can be passed',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 55',
+	description: 'Personal income tax increases on incomes over $250,000',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 56',
+	description: 'Increase the cigarette tax by $2.00 per pack',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 57',
+	description: 'Felons convicted of non-violent crimes',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Prop 58',
+	description: 'Bilingual education in public schools',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 59',
+	description: 'State\'s position on Citizens United v. Federal Election Commission',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 60',
+	description: 'Require the use of condoms in pornographic films',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 61',
+	description: 'Prescription drug price regulations',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 62',
+	description: 'Repeal the death penalty',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 63',
+	description: 'Background checks for ammunition purchases',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 64',
+	description: 'Legalization of marijuana and hemp',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 65',
+	description: 'Grocery and retail carry-out bags',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 66',
+	description: 'Death penalty procedures',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}, {
+	name: 'Proposition 67',
+	description: 'Prohibition on plastic single-use carryout bags',
+	choices: ['Yes', 'No'],
+	level: 'State Propositions'
+}];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvaW5pdGlhdGl2ZXMuanMiXSwibmFtZXMiOlsid2luZG93IiwiaW5pdGlhdGl2ZXMiLCJuYW1lIiwiZGVzY3JpcHRpb24iLCJjaG9pY2VzIiwibGV2ZWwiXSwibWFwcGluZ3MiOiI7O0FBQUFBLE9BQU9DLFdBQVAsR0FBcUIsQ0FBQztBQUNyQkMsT0FBTSw0Q0FEZTtBQUVyQkMsY0FBYSwyQkFGUTtBQUdyQkMsVUFBUyxDQUFDLDBCQUFELEVBQTZCLHlCQUE3QixFQUF3RCx5QkFBeEQsRUFBbUYsd0JBQW5GLEVBQTZHLHVDQUE3RyxDQUhZO0FBSXJCQyxRQUFPO0FBSmMsQ0FBRCxFQUtsQjtBQUNGSCxPQUFNLFdBREo7QUFFRkMsY0FBYSw0REFGWDtBQUdGQyxVQUFTLENBQUMsZUFBRCxFQUFrQixpQkFBbEIsQ0FIUDtBQUlGQyxRQUFPO0FBSkwsQ0FMa0IsRUFVbEI7QUFDRkgsT0FBTSw0Q0FESjtBQUVGQyxjQUFhLCtFQUZYO0FBR0ZDLFVBQVMsQ0FBQyxjQUFELEVBQWlCLGVBQWpCLENBSFA7QUFJRkMsUUFBTztBQUpMLENBVmtCLEVBZWxCO0FBQ0ZILE9BQU0sZ0JBREo7QUFFRkMsY0FBYSwrQ0FGWDtBQUdGQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUDtBQUlGQyxRQUFPO0FBSkwsQ0Fma0IsRUFvQm5CO0FBQ0RILE9BQU0sZ0JBREw7QUFFREMsY0FBYSx1REFGWjtBQUdEQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUjtBQUlEQyxRQUFPO0FBSk4sQ0FwQm1CLEVBeUJuQjtBQUNESCxPQUFNLGdCQURMO0FBRURDLGNBQWEseUNBRlo7QUFHREMsVUFBUyxDQUFDLEtBQUQsRUFBUSxJQUFSLENBSFI7QUFJREMsUUFBTztBQUpOLENBekJtQixFQThCbkI7QUFDREgsT0FBTSxnQkFETDtBQUVEQyxjQUFhLHdEQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQTlCbUIsRUFtQ25CO0FBQ0RILE9BQU0sZ0JBREw7QUFFREMsY0FBYSx3REFGWjtBQUdEQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUjtBQUlEQyxRQUFPO0FBSk4sQ0FuQ21CLEVBd0NuQjtBQUNESCxPQUFNLGdCQURMO0FBRURDLGNBQWEsOENBRlo7QUFHREMsVUFBUyxDQUFDLEtBQUQsRUFBUSxJQUFSLENBSFI7QUFJREMsUUFBTztBQUpOLENBeENtQixFQTZDbkI7QUFDREgsT0FBTSxnQkFETDtBQUVEQyxjQUFhLHdDQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQTdDbUIsRUFrRG5CO0FBQ0RILE9BQU0sU0FETDtBQUVEQyxjQUFhLHVDQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQWxEbUIsRUF1RG5CO0FBQ0RILE9BQU0sZ0JBREw7QUFFREMsY0FBYSxxRUFGWjtBQUdEQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUjtBQUlEQyxRQUFPO0FBSk4sQ0F2RG1CLEVBNERuQjtBQUNESCxPQUFNLGdCQURMO0FBRURDLGNBQWEsa0RBRlo7QUFHREMsVUFBUyxDQUFDLEtBQUQsRUFBUSxJQUFSLENBSFI7QUFJREMsUUFBTztBQUpOLENBNURtQixFQWlFbkI7QUFDREgsT0FBTSxnQkFETDtBQUVEQyxjQUFhLHFDQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQWpFbUIsRUFzRW5CO0FBQ0RILE9BQU0sZ0JBREw7QUFFREMsY0FBYSwwQkFGWjtBQUdEQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUjtBQUlEQyxRQUFPO0FBSk4sQ0F0RW1CLEVBMkVuQjtBQUNESCxPQUFNLGdCQURMO0FBRURDLGNBQWEsNENBRlo7QUFHREMsVUFBUyxDQUFDLEtBQUQsRUFBUSxJQUFSLENBSFI7QUFJREMsUUFBTztBQUpOLENBM0VtQixFQWdGbkI7QUFDREgsT0FBTSxnQkFETDtBQUVEQyxjQUFhLG9DQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQWhGbUIsRUFxRm5CO0FBQ0RILE9BQU0sZ0JBREw7QUFFREMsY0FBYSxtQ0FGWjtBQUdEQyxVQUFTLENBQUMsS0FBRCxFQUFRLElBQVIsQ0FIUjtBQUlEQyxRQUFPO0FBSk4sQ0FyRm1CLEVBMEZuQjtBQUNESCxPQUFNLGdCQURMO0FBRURDLGNBQWEsMEJBRlo7QUFHREMsVUFBUyxDQUFDLEtBQUQsRUFBUSxJQUFSLENBSFI7QUFJREMsUUFBTztBQUpOLENBMUZtQixFQStGbkI7QUFDREgsT0FBTSxnQkFETDtBQUVEQyxjQUFhLGlEQUZaO0FBR0RDLFVBQVMsQ0FBQyxLQUFELEVBQVEsSUFBUixDQUhSO0FBSURDLFFBQU87QUFKTixDQS9GbUIsQ0FBckIiLCJmaWxlIjoiaW5pdGlhdGl2ZXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ3aW5kb3cuaW5pdGlhdGl2ZXMgPSBbe1xuXHRuYW1lOiAnUHJlc2lkZW50IG9mIHRoZSAgVW5pdGVkIFN0YXRlcyBvZiBBbWVyaWNhJyxcblx0ZGVzY3JpcHRpb246ICdJdFxcJ3MgdGhlIHByZXNpZGVuY3kgeWFsbCcsXG5cdGNob2ljZXM6IFsnSGlsYXJ5IENsaW50b24vVGltIEthaW5lJywgJ0RvbmFsZCBUcnVtcC9NaWtlIFBlbmNlJywgJ0ppbGwgU3RlaW4vQWphbXUgQmFyYWthJywgJ0dhcnkgSm9obnNvbi9CaWxsIFdlbGQnLCAnR2xvcmlhIEVzdGVsYSBMYSBSaXZhL0Rlbm5pcyBKLiBCYW5rcyddLFxuXHRsZXZlbDogJ0ZlZGVyYWwnXG59LCB7XG5cdG5hbWU6ICdVUyBTZW5hdGUnLFxuXHRkZXNjcmlwdGlvbjogJ1RoZXJlIGlzIG5vIGluY3VtYmVudCB3aXRoIHRoZSByZXRpcmVtZW50IG9mIEJhcmJhcmEgQm94ZXInLFxuXHRjaG9pY2VzOiBbJ0thbWFsYSBIYXJyaXMnLCAnTG9yZXR0YSBTYW5jaGV6J10sXG5cdGxldmVsOiAnRmVkZXJhbCdcbn0sIHtcblx0bmFtZTogJ1VTIEhvdXNlIG9mIFJlcHJlc2VudGF0aXZlczogMTJ0aCBEaXN0cmljdCcsXG5cdGRlc2NyaXB0aW9uOiAnVm90ZSBmb3IgdGhlIFVTIFJlcHJlc2VudGF0aXZlIGZyb20gQ2FsaWZvcm5pYVxcJ3MgMTJ0aCBDb25ncmVzc2lvbmFsIERpc3RyaWN0Jyxcblx0Y2hvaWNlczogWydOYW5jeSBQZWxvc2knLCAnUHJlc3RvbiBQaWN1cyddLFxuXHRsZXZlbDogJ0ZlZGVyYWwnXG59LCB7XG5cdG5hbWU6ICdQcm9wb3NpdGlvbiA1MScsXG5cdGRlc2NyaXB0aW9uOiAnJDkgYmlsbGlvbiBpbiBib25kcyBmb3IgZWR1Y2F0aW9uIGFuZCBzY2hvb2xzJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3Bvc2l0aW9uIDUyJyxcblx0ZGVzY3JpcHRpb246ICdWb3RlciBhcHByb3ZhbCBvZiBjaGFuZ2VzIHRvIHRoZSBob3NwaXRhbCBmZWUgcHJvZ3JhbScsXG5cdGNob2ljZXM6IFsnWWVzJywgJ05vJ10sXG5cdGxldmVsOiAnU3RhdGUgUHJvcG9zaXRpb25zJ1xufSx7XG5cdG5hbWU6ICdQcm9wb3NpdGlvbiA1MycsXG5cdGRlc2NyaXB0aW9uOiAnUHJvamVjdHMgdGhhdCBjb3N0IG1vcmUgdGhhbiAkMiBiaWxsaW9uJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3Bvc2l0aW9uIDU0Jyxcblx0ZGVzY3JpcHRpb246ICdDb25kaXRpb25zIHVuZGVyIHdoaWNoIGxlZ2lzbGF0aXZlIGJpbGxzIGNhbiBiZSBwYXNzZWQnLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNTUnLFxuXHRkZXNjcmlwdGlvbjogJ1BlcnNvbmFsIGluY29tZSB0YXggaW5jcmVhc2VzIG9uIGluY29tZXMgb3ZlciAkMjUwLDAwMCcsXG5cdGNob2ljZXM6IFsnWWVzJywgJ05vJ10sXG5cdGxldmVsOiAnU3RhdGUgUHJvcG9zaXRpb25zJ1xufSx7XG5cdG5hbWU6ICdQcm9wb3NpdGlvbiA1NicsXG5cdGRlc2NyaXB0aW9uOiAnSW5jcmVhc2UgdGhlIGNpZ2FyZXR0ZSB0YXggYnkgJDIuMDAgcGVyIHBhY2snLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNTcnLFxuXHRkZXNjcmlwdGlvbjogJ0ZlbG9ucyBjb252aWN0ZWQgb2Ygbm9uLXZpb2xlbnQgY3JpbWVzJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3AgNTgnLFxuXHRkZXNjcmlwdGlvbjogJ0JpbGluZ3VhbCBlZHVjYXRpb24gaW4gcHVibGljIHNjaG9vbHMnLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNTknLFxuXHRkZXNjcmlwdGlvbjogJ1N0YXRlXFwncyBwb3NpdGlvbiBvbiBDaXRpemVucyBVbml0ZWQgdi4gRmVkZXJhbCBFbGVjdGlvbiBDb21taXNzaW9uJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3Bvc2l0aW9uIDYwJyxcblx0ZGVzY3JpcHRpb246ICdSZXF1aXJlIHRoZSB1c2Ugb2YgY29uZG9tcyBpbiBwb3Jub2dyYXBoaWMgZmlsbXMnLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNjEnLFxuXHRkZXNjcmlwdGlvbjogJ1ByZXNjcmlwdGlvbiBkcnVnIHByaWNlIHJlZ3VsYXRpb25zJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3Bvc2l0aW9uIDYyJyxcblx0ZGVzY3JpcHRpb246ICdSZXBlYWwgdGhlIGRlYXRoIHBlbmFsdHknLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNjMnLFxuXHRkZXNjcmlwdGlvbjogJ0JhY2tncm91bmQgY2hlY2tzIGZvciBhbW11bml0aW9uIHB1cmNoYXNlcycsXG5cdGNob2ljZXM6IFsnWWVzJywgJ05vJ10sXG5cdGxldmVsOiAnU3RhdGUgUHJvcG9zaXRpb25zJ1xufSx7XG5cdG5hbWU6ICdQcm9wb3NpdGlvbiA2NCcsXG5cdGRlc2NyaXB0aW9uOiAnTGVnYWxpemF0aW9uIG9mIG1hcmlqdWFuYSBhbmQgaGVtcCcsXG5cdGNob2ljZXM6IFsnWWVzJywgJ05vJ10sXG5cdGxldmVsOiAnU3RhdGUgUHJvcG9zaXRpb25zJ1xufSx7XG5cdG5hbWU6ICdQcm9wb3NpdGlvbiA2NScsXG5cdGRlc2NyaXB0aW9uOiAnR3JvY2VyeSBhbmQgcmV0YWlsIGNhcnJ5LW91dCBiYWdzJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59LHtcblx0bmFtZTogJ1Byb3Bvc2l0aW9uIDY2Jyxcblx0ZGVzY3JpcHRpb246ICdEZWF0aCBwZW5hbHR5IHByb2NlZHVyZXMnLFxuXHRjaG9pY2VzOiBbJ1llcycsICdObyddLFxuXHRsZXZlbDogJ1N0YXRlIFByb3Bvc2l0aW9ucydcbn0se1xuXHRuYW1lOiAnUHJvcG9zaXRpb24gNjcnLFxuXHRkZXNjcmlwdGlvbjogJ1Byb2hpYml0aW9uIG9uIHBsYXN0aWMgc2luZ2xlLXVzZSBjYXJyeW91dCBiYWdzJyxcblx0Y2hvaWNlczogWydZZXMnLCAnTm8nXSxcblx0bGV2ZWw6ICdTdGF0ZSBQcm9wb3NpdGlvbnMnXG59XSJdfQ==

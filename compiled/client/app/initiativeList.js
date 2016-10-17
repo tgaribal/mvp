@@ -1,0 +1,14 @@
+"use strict";
+
+var InitiativeList = function InitiativeList(props) {
+  return React.createElement(
+    "div",
+    { className: "initiativeList" },
+    props.initiatives.map(function (initiative) {
+      return React.createElement(InitiativeListEntry, { initiative: initiative });
+    })
+  );
+};
+
+window.InitiativeList = InitiativeList;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvaW5pdGlhdGl2ZUxpc3QuanN4Il0sIm5hbWVzIjpbIkluaXRpYXRpdmVMaXN0IiwicHJvcHMiLCJpbml0aWF0aXZlcyIsIm1hcCIsImluaXRpYXRpdmUiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBSUEsaUJBQWlCLFNBQWpCQSxjQUFpQixDQUFDQyxLQUFEO0FBQUEsU0FDbkI7QUFBQTtBQUFBLE1BQUssV0FBVSxnQkFBZjtBQUNHQSxVQUFNQyxXQUFOLENBQWtCQyxHQUFsQixDQUFzQjtBQUFBLGFBQ3JCLG9CQUFDLG1CQUFELElBQXFCLFlBQVlDLFVBQWpDLEdBRHFCO0FBQUEsS0FBdEI7QUFESCxHQURtQjtBQUFBLENBQXJCOztBQVFBQyxPQUFPTCxjQUFQLEdBQXdCQSxjQUF4QiIsImZpbGUiOiJpbml0aWF0aXZlTGlzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBJbml0aWF0aXZlTGlzdCA9IChwcm9wcykgPT4gKFxuICA8ZGl2IGNsYXNzTmFtZT1cImluaXRpYXRpdmVMaXN0XCI+XG4gICAge3Byb3BzLmluaXRpYXRpdmVzLm1hcChpbml0aWF0aXZlID0+IFxuICAgICAgPEluaXRpYXRpdmVMaXN0RW50cnkgaW5pdGlhdGl2ZT17aW5pdGlhdGl2ZX0gLz4gXG4gICAgKX1cbiAgPC9kaXY+XG4pO1xuXG53aW5kb3cuSW5pdGlhdGl2ZUxpc3QgPSBJbml0aWF0aXZlTGlzdDsiXX0=

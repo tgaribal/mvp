@@ -1,0 +1,14 @@
+"use strict";
+
+var InitiativeListEntry = function InitiativeListEntry(props) {
+  return React.createElement(
+    "div",
+    { className: "initiativeListEntry" },
+    " ",
+    props.initiative.name,
+    " "
+  );
+};
+
+window.InitiativeListEntry = InitiativeListEntry;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvaW5pdGlhdGl2ZUxpc3RFbnRyeS5qc3giXSwibmFtZXMiOlsiSW5pdGlhdGl2ZUxpc3RFbnRyeSIsInByb3BzIiwiaW5pdGlhdGl2ZSIsIm5hbWUiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBSUEsc0JBQXNCLFNBQXRCQSxtQkFBc0IsQ0FBQ0MsS0FBRDtBQUFBLFNBQ3hCO0FBQUE7QUFBQSxNQUFLLFdBQVUscUJBQWY7QUFBQTtBQUF1Q0EsVUFBTUMsVUFBTixDQUFpQkMsSUFBeEQ7QUFBQTtBQUFBLEdBRHdCO0FBQUEsQ0FBMUI7O0FBSUFDLE9BQU9KLG1CQUFQLEdBQTZCQSxtQkFBN0IiLCJmaWxlIjoiaW5pdGlhdGl2ZUxpc3RFbnRyeS5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBJbml0aWF0aXZlTGlzdEVudHJ5ID0gKHByb3BzKSA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPVwiaW5pdGlhdGl2ZUxpc3RFbnRyeVwiPiB7cHJvcHMuaW5pdGlhdGl2ZS5uYW1lfSA8L2Rpdj5cbik7XG5cbndpbmRvdy5Jbml0aWF0aXZlTGlzdEVudHJ5ID0gSW5pdGlhdGl2ZUxpc3RFbnRyeTsiXX0=
