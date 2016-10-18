@@ -1,0 +1,18 @@
+'use strict';
+
+var mongoose = require('mongoose');
+
+var UserSchema = mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
+});
+
+module.exports = mongoose.model('Users', UserSchema);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci91c2VyTW9kZWwuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJLFdBQVcsUUFBUSxVQUFSLENBQVg7O0FBRUYsSUFBSSxhQUFhLFNBQVMsTUFBVCxDQUFnQjtBQUMvQixZQUFVO0FBQ1IsVUFBTSxNQUFOO0FBQ0EsY0FBVSxJQUFWO0FBQ0EsWUFBUSxJQUFSO0dBSEY7QUFLQSxZQUFVO0FBQ1IsVUFBTSxNQUFOO0FBQ0EsY0FBVSxJQUFWO0dBRkY7Q0FOZSxDQUFiOztBQVlKLE9BQU8sT0FBUCxHQUFpQixTQUFTLEtBQVQsQ0FBZSxPQUFmLEVBQXdCLFVBQXhCLENBQWpCIiwiZmlsZSI6InVzZXJNb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBtb25nb29zZSA9IHJlcXVpcmUoJ21vbmdvb3NlJyk7XG5cbiAgdmFyIFVzZXJTY2hlbWEgPSBtb25nb29zZS5TY2hlbWEoe1xuICAgIHVzZXJuYW1lOiB7XG4gICAgICB0eXBlOiBTdHJpbmcsXG4gICAgICByZXF1aXJlZDogdHJ1ZSxcbiAgICAgIHVuaXF1ZTogdHJ1ZVxuICAgIH0sXG4gICAgcGFzc3dvcmQ6IHtcbiAgICAgIHR5cGU6IFN0cmluZyxcbiAgICAgIHJlcXVpcmVkOiB0cnVlXG4gICAgfVxuICB9KTtcblxuICBtb2R1bGUuZXhwb3J0cyA9IG1vbmdvb3NlLm1vZGVsKCdVc2VycycsIFVzZXJTY2hlbWEpOyJdfQ==

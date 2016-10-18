@@ -1,7 +1,8 @@
 var InitiativeList = (props) => (
   <div className="initiativeList">
-    {props.initiatives.map(initiative => 
-      <InitiativeListEntry initiative={initiative} /> 
+    {props.initiatives.filter(initiative => initiative.level === props.level)
+                      .map(initiative => 
+      <InitiativeListEntry initiative={initiative} />
     )}
   </div>
 );

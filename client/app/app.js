@@ -10,13 +10,21 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Nav />
-      </div>
+        <div className="mainNav">
+          <Nav click={this.handleNavClick.bind(this)}/>
+        </div>
 
-      <div className="mainBody">
-        <InitiativeList initiatives={this.state.initiatives}/>
+        <div className="mainBody">
+          <InitiativeList level={this.state.navFilter} initiatives={this.state.initiatives} />
+        </div>
       </div>
     );
+  }
+
+  handleNavClick (level) {
+    console.log('click level:',level)
+    this.setState({navFilter: level})
+    // this.render();
   }
 
 }

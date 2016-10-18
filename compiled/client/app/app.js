@@ -17,7 +17,8 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
-      initiatives: initiatives
+      initiatives: initiatives,
+      navFilter: 'Federal'
     };
     return _this;
   }
@@ -25,7 +26,27 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return React.createElement(InitiativeList, { initiatives: this.state.initiatives });
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "mainNav" },
+          React.createElement(Nav, { click: this.handleNavClick.bind(this) })
+        ),
+        React.createElement(
+          "div",
+          { className: "mainBody" },
+          React.createElement(InitiativeList, { level: this.state.navFilter, initiatives: this.state.initiatives })
+        )
+      );
+    }
+  }, {
+    key: "handleNavClick",
+    value: function handleNavClick(level) {
+      console.log('click level:', level);
+      this.setState({ navFilter: level });
+      // this.render();
     }
   }]);
 
@@ -33,4 +54,4 @@ var App = function (_React$Component) {
 }(React.Component);
 
 window.App = App;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvYXBwLmpzIl0sIm5hbWVzIjpbIkFwcCIsInByb3BzIiwic3RhdGUiLCJpbml0aWF0aXZlcyIsIlJlYWN0IiwiQ29tcG9uZW50Iiwid2luZG93Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0lBQU1BLEc7OztBQUNKLGVBQWFDLEtBQWIsRUFBb0I7QUFBQTs7QUFBQSwwR0FDWkEsS0FEWTs7QUFFbEIsVUFBS0MsS0FBTCxHQUFhO0FBQ1hDLG1CQUFhQTtBQURGLEtBQWI7QUFGa0I7QUFLbkI7Ozs7NkJBRVM7QUFDUixhQUNFLG9CQUFDLGNBQUQsSUFBZ0IsYUFBYSxLQUFLRCxLQUFMLENBQVdDLFdBQXhDLEdBREY7QUFJRDs7OztFQWJlQyxNQUFNQyxTOztBQWdCeEJDLE9BQU9OLEdBQVAsR0FBYUEsR0FBYiIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICBjb25zdHJ1Y3RvciAocHJvcHMpIHtcbiAgICBzdXBlcihwcm9wcyk7XG4gICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgIGluaXRpYXRpdmVzOiBpbml0aWF0aXZlc1xuICAgIH07XG4gIH1cblxuICByZW5kZXIgKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8SW5pdGlhdGl2ZUxpc3QgaW5pdGlhdGl2ZXM9e3RoaXMuc3RhdGUuaW5pdGlhdGl2ZXN9Lz5cblxuICAgICk7XG4gIH1cbn1cblxud2luZG93LkFwcCA9IEFwcDsiXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC9hcHAvYXBwLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7SUFBTTs7O0FBQ0osZUFBYSxLQUFiLEVBQW9COzs7MEdBQ1osUUFEWTs7QUFFbEIsVUFBSyxLQUFMLEdBQWE7QUFDWCxtQkFBYSxXQUFiO0FBQ0EsaUJBQVcsU0FBWDtLQUZGLENBRmtCOztHQUFwQjs7Ozs2QkFRVTtBQUNSLGFBQ0U7OztRQUNFOztZQUFLLFdBQVUsU0FBVixFQUFMO1VBQ0Usb0JBQUMsR0FBRCxJQUFLLE9BQU8sS0FBSyxjQUFMLENBQW9CLElBQXBCLENBQXlCLElBQXpCLENBQVAsRUFBTCxDQURGO1NBREY7UUFLRTs7WUFBSyxXQUFVLFVBQVYsRUFBTDtVQUNFLG9CQUFDLGNBQUQsSUFBZ0IsT0FBTyxLQUFLLEtBQUwsQ0FBVyxTQUFYLEVBQXNCLGFBQWEsS0FBSyxLQUFMLENBQVcsV0FBWCxFQUExRCxDQURGO1NBTEY7T0FERixDQURROzs7O21DQWNNLE9BQU87QUFDckIsY0FBUSxHQUFSLENBQVksY0FBWixFQUEyQixLQUEzQixFQURxQjtBQUVyQixXQUFLLFFBQUwsQ0FBYyxFQUFDLFdBQVcsS0FBWCxFQUFmOztBQUZxQjs7OztFQXZCUCxNQUFNLFNBQU47O0FBK0JsQixPQUFPLEdBQVAsR0FBYSxHQUFiIiwiZmlsZSI6ImFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbImNsYXNzIEFwcCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yIChwcm9wcykge1xuICAgIHN1cGVyKHByb3BzKTtcbiAgICB0aGlzLnN0YXRlID0ge1xuICAgICAgaW5pdGlhdGl2ZXM6IGluaXRpYXRpdmVzLFxuICAgICAgbmF2RmlsdGVyOiAnRmVkZXJhbCdcbiAgICB9O1xuICB9XG5cbiAgcmVuZGVyICgpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYWluTmF2XCI+XG4gICAgICAgICAgPE5hdiBjbGljaz17dGhpcy5oYW5kbGVOYXZDbGljay5iaW5kKHRoaXMpfS8+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWFpbkJvZHlcIj5cbiAgICAgICAgICA8SW5pdGlhdGl2ZUxpc3QgbGV2ZWw9e3RoaXMuc3RhdGUubmF2RmlsdGVyfSBpbml0aWF0aXZlcz17dGhpcy5zdGF0ZS5pbml0aWF0aXZlc30gLz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG5cbiAgaGFuZGxlTmF2Q2xpY2sgKGxldmVsKSB7XG4gICAgY29uc29sZS5sb2coJ2NsaWNrIGxldmVsOicsbGV2ZWwpXG4gICAgdGhpcy5zZXRTdGF0ZSh7bmF2RmlsdGVyOiBsZXZlbH0pXG4gICAgLy8gdGhpcy5yZW5kZXIoKTtcbiAgfVxuXG59XG5cbndpbmRvdy5BcHAgPSBBcHA7Il19
