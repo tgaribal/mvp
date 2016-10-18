@@ -1,1 +1,2 @@
-var renderToString = requre('react-dom/server').renderToString;
+// var renderToString = requre('react-dom/server').renderToString;
+
