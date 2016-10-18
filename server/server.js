@@ -1,8 +1,12 @@
 var express = require('express');
 var parser = require('body-parser')
 var mongoose = require('mongoose');
-var createStore = require('redux').createStore;
-var provider = require('redux-react').Provider;
+var React = require('react');
+var ReactDOMServer = require('react-dom/server');
+var iVote = require('client/app')
+// var createStore = require('redux').createStore;
+// var provider = require('redux-react').Provider;
+// var render = require('handleRender');
 
 var Initiative = require('./initiativeModel');
 var User = require('./userModel');
@@ -12,11 +16,7 @@ var port = 8080;
 
 
 
-app.use(parser.json());
-app.use(express.static('client'));
-
 mongoose.connect('mongodb://localhost/ivote');
-
 var db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function () {
@@ -25,34 +25,32 @@ db.once('open', function () {
 
 
 
-app.get('/initiatives', function (req, res) {
+// app.use(render);
+app.use(parser.json());
+app.use('/initiatives', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+app.get('/initiatives', function (req, res, next) {
   Initiative.find().exec(function(err, initiative) {
     console.log('get works');
     res.status(200).send(initiative); 
   })
 })
 
-app.post('/initiatives', function (req, res) {
+app.post('/initiatives', function (req, res, next) {
 })
 
-
-// exports.getInitiatives = function (req, res) {
-//   Initiative.find().exec(function (err, initiatives) {
-//     res.status(200).send(initiatives);
-//   })
-// }
-
-// exports.vote = function (req, res) {
-//   console.log(req.body);
-// }
 
 
 app.listen(port, function(err) {
   if (err) {
     console.log("ERROR!!!!!")
   } else  {
-    console.log("Started listening on port 8080");
-    
+    console.log("Started listening on port 8080"); 
   }
 });
 
