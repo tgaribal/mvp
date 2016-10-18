@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var InitiativeSchema = mongoose.Schema ({
+var InitiativeSchema = new mongoose.Schema ({
   name: String,
   subtitle: String,
   description: String,

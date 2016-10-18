@@ -28,7 +28,7 @@ body {
   margin: 0;
 }
 .initiativeDescription {
-  color: #d9dbe2;
+  color: lightgrey;
   font-style: italic;
   font-size: 1em;
 }
@@ -39,4 +39,32 @@ body {
 .hidden {
   transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   overflow: hidden;
+}
+
+.choice {
+  width: 60%;
+  height: 1.5em;
+  background: lightgrey;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  vertical-align: center;
+  text-align: center;
+}
+
+.choice:hover {
+  background: grey;
+  color: white;
+}
+
+.usersChoice: {
+  margin: 10px;
+  padding: 5px;
+  width: 25%;
+  margin: auto;
+}
+
+.usersChoiceName: {
+  font-weight: 800;
 }

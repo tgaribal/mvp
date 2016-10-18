@@ -2,8 +2,8 @@ var express = require('express');
 var parser = require('body-parser')
 var mongoose = require('mongoose');
 
-var User = require('./initiativeModel');
-var Initiative = require('./userModel');
+var Initiative = require('./initiativeModel');
+var User = require('./userModel');
 
 var app = express();
 app.use(parser.json());
@@ -18,15 +18,21 @@ db.once('open', function () {
 
 
 
-app.get('/', function (req, res) {
+app.get('/initiatives', function (req, res) {
   console.log("helpo!")
-  res.send('get works');
+  var initiatives = {}
+  Initiative.find().exec(function(err, initiative) {
+    console.log(initiative)
+    initiatives[initiative.name] = initiative; 
+  })
+  console.log(initiatives)
+  res.status(200).send(initiatives);
 })
 
-app.post('/', function (req, res) {
-  console.log('helpppppp')
-  res.send('post works');
-})
+// app.post('/', function (req, res) {
+//   console.log('helpppppp')
+//   res.send('post works');
+// })
 // exports.getInitiatives = function (req, res) {
 //   Initiative.find().exec(function (err, initiatives) {
 //     res.status(200).send(initiatives);
@@ -36,6 +42,8 @@ app.post('/', function (req, res) {
 // exports.vote = function (req, res) {
 //   console.log(req.body);
 // }
+
+
 app.listen(8080, function(err) {
   if (err) {
     console.log("ERROR!!!!!")

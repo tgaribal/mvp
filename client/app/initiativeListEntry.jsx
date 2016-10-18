@@ -4,8 +4,8 @@ class InitiativeListEntry extends React.Component {
     this.state = {
       initiative: this.props.initiative,
       hidden: true,
-      selection: undefined,
-      numChoices: this.props.initiative.numChoices,
+      choice: undefined,
+      numChoices: this.props.initiative.numChoices
     }
   }
 
@@ -22,12 +22,12 @@ class InitiativeListEntry extends React.Component {
         <div className="hidden">
           <div className="initiativeSubtitle">{this.props.initiative.subtitle}</div>
           <div className="initiativeDescription">{this.props.initiative.description}</div>
-          <form className="initiativeChoices">
+          <div className="initiativeChoices">
             {this.props.initiative.choices.map (choice =>
-              <InitiativeChoice choice={choice} />
+              <InitiativeChoice choice={choice} click={this.handleInitiativeChoiceSelection.bind(this)}/>
             )}
-          </form>
-          <div className="usersChoice">Your choice: {this.selection}</div>
+          </div>
+          <div className="usersChoice">Your choice: <div className="usersChoiceName">{this.state.choice}</div></div>
         </div>
       </div>
     );  
@@ -36,6 +36,15 @@ class InitiativeListEntry extends React.Component {
   handleHideClick () {
     this.setState({hidden: !this.state.hidden})
     console.log(this.state.hidden)
+  }
+
+  handleInitiativeChoiceSelection (choice) {
+    this.setState({
+      choice: (this.state.choice === choice) ? undefined : choice,
+    });
+    if (this.state.choice) {
+      $(this).addClass('voted');
+    }
   }
 
 }
