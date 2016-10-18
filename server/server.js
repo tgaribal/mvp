@@ -1,12 +1,19 @@
 var express = require('express');
 var parser = require('body-parser')
 var mongoose = require('mongoose');
+var createStore = require('redux').createStore;
+var provider = require('redux-react').Provider;
 
 var Initiative = require('./initiativeModel');
 var User = require('./userModel');
 
 var app = express();
+var port = 8080;
+
+
+
 app.use(parser.json());
+app.use(express.static('client'));
 
 mongoose.connect('mongodb://localhost/ivote');
 
@@ -19,20 +26,16 @@ db.once('open', function () {
 
 
 app.get('/initiatives', function (req, res) {
-  console.log("helpo!")
-  var initiatives = {}
   Initiative.find().exec(function(err, initiative) {
-    console.log(initiative)
-    initiatives[initiative.name] = initiative; 
+    console.log('get works');
+    res.status(200).send(initiative); 
   })
-  console.log(initiatives)
-  res.status(200).send(initiatives);
 })
 
-// app.post('/', function (req, res) {
-//   console.log('helpppppp')
-//   res.send('post works');
-// })
+app.post('/initiatives', function (req, res) {
+})
+
+
 // exports.getInitiatives = function (req, res) {
 //   Initiative.find().exec(function (err, initiatives) {
 //     res.status(200).send(initiatives);
@@ -44,7 +47,7 @@ app.get('/initiatives', function (req, res) {
 // }
 
 
-app.listen(8080, function(err) {
+app.listen(port, function(err) {
   if (err) {
     console.log("ERROR!!!!!")
   } else  {
@@ -52,3 +55,4 @@ app.listen(8080, function(err) {
     
   }
 });
+

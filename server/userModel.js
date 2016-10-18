@@ -14,7 +14,7 @@ var Promise = require('bluebird');
     }
   });
 
-  User = mongoose.model('Users', UserSchema);
+  User = mongoose.model('users', UserSchema);
 
   User.prototype.hashPassword = function (next) {
     var cipher = Promise.promisify (bcrypt.hash);

@@ -9,4 +9,4 @@ var InitiativeSchema = new mongoose.Schema ({
   choices: {}
 });
 
-module.exports = mongoose.model('Initiatives', InitiativeSchema);
+module.exports = mongoose.model('initiatives', InitiativeSchema);
