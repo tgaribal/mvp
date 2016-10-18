@@ -11,7 +11,8 @@ var Promise = require('bluebird');
     password: {
       type: String,
       required: true
-    }
+    },
+    votes: {}
   });
 
   User = mongoose.model('users', UserSchema);
@@ -29,4 +30,4 @@ var Promise = require('bluebird');
     this.hashPassword(next);
   });
 
-  module.exports.User = User;
+  module.exports = User;

@@ -6,7 +6,7 @@ var InitiativeSchema = new mongoose.Schema ({
   description: String,
   level: String,
   numChoices: Number,
-  choices: {}
+  choices: []
 });
 
 module.exports = mongoose.model('initiatives', InitiativeSchema);
