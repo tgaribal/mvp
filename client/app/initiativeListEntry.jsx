@@ -27,7 +27,7 @@ class InitiativeListEntry extends React.Component {
               <InitiativeChoice selection={this.state.choice} key={choice} choice={choice} click={this.handleInitiativeChoiceSelection}/>
             )}
           </div>
-          <div className="usersChoice">Your choice: <div className="usersChoiceName">{this.state.choice}</div></div>
+          <div className="usersChoice">You have selected: <div className="usersChoiceName">{this.state.choice}</div></div>
         </div>
       </div>
     );  

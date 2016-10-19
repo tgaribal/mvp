@@ -12,12 +12,17 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <img src="../styles/voteCA.png" />
         <div className="mainNav">
           <Nav click={this.handleNavClick}/>
         </div>
 
         <div className="mainBody">
           <InitiativeList level={this.state.navFilter} initiatives={this.state.initiatives} />
+        </div>
+
+        <div>
+          {(this.state.navFilter === "My Ballot") ? <MyBallot user={this.state.currentUser}/> : <div></div>}
         </div>
       </div>
     );

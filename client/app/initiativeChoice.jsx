@@ -21,7 +21,7 @@ class InitiativeChoice extends React.Component {
 
   componentDidMount() {
       console.log("1", this.props.choice)
-      console.log('2', {this.state.selection})
+      console.log('2', props.selection)
       console.log('3', {this.props.selection})
       // this.changeSelection(this.props.selection).bind(this)
     // if (this.props.choice === this.props.selection) {
