@@ -10,6 +10,7 @@ class InitiativeChoice extends React.Component {
   }
 
   render () {
+
     return (
       <div className={this.state.selected} onClick={this.changeSelection}> 
         <div className="click" onClick={this.props.click.bind(null, this.props.choice)}> 
@@ -20,9 +21,9 @@ class InitiativeChoice extends React.Component {
   }
 
   componentDidMount() {
-      console.log("1", this.props.choice)
-      console.log('2', props.selection)
-      console.log('3', {this.props.selection})
+      // console.log("1", this.props.choice)
+      // console.log('2', props.selection)
+      // console.log('3', {this.props.selection})
       // this.changeSelection(this.props.selection).bind(this)
     // if (this.props.choice === this.props.selection) {
     //   this.changeSelection(this.props.choice)

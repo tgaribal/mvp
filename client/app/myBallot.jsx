@@ -2,17 +2,19 @@ class MyBallot extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      user: this.props.user
+      votes: this.props.user.votes
     }
   }
 
   render() {
+        {console.log(this.state.votes)}
     return (
       <div className="myBallot">
-        {props.user.votes.map((vote, key) => 
-          <div className="vote" > For {key} you have selected {vote[key]})}
+        {Object.keys(this.state.votes).map((key)=>
+          <div key={key} className="vote"> For {key} you have selected  <span className="choice">{this.state.votes[key]} </span></div>
+        )}
       </div>
-    );
+    )
   }
 }
 

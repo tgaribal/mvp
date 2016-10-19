@@ -110,3 +110,22 @@ body {
 .usersChoiceName {
   font-weight: 800;
 }
+
+.vote {
+  width: 60%;
+  padding: 10px;
+  font-weight: 800;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 8px;
+  margin: 8px auto;
+}
+
+.choice {
+  float: right;
+  right: 0;
+  font-size: 1.2em;
+  border-radius: 5px;
+}

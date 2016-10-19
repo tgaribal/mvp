@@ -22,7 +22,7 @@ class App extends React.Component {
         </div>
 
         <div>
-          {(this.state.navFilter === "My Ballot") ? <MyBallot user={this.state.currentUser}/> : <div></div>}
+          {(this.state.navFilter === "My Ballot") ? <MyBallot user={this.state.currentUser[0]}/> : <div></div>}
         </div>
       </div>
     );
@@ -32,6 +32,9 @@ class App extends React.Component {
     $.get('http://localhost:8080/initiatives', function (data, res) {
       this.setState({initiatives: data});;
     }.bind(this));
+    $.get('http://localhost:8080/users', function (data, res) {
+      this.setState({currentUser: data})
+    }.bind(this))
   }
   
   handleNavClick (level) {
