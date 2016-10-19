@@ -3,8 +3,12 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
+.initiativeList {
+  margin-top: 30px;
+}
+
 .initiativeListEntry {
-  width: 75%;
+  width: 70%;
   border: 1px solid grey;
   border-radius: 5px;
   margin: auto;
@@ -41,30 +45,68 @@ body {
   overflow: hidden;
 }
 
-.choice {
+.notSelected, .selected {
   width: 60%;
   height: 1.5em;
-  background: lightgrey;
-  border: 1px solid black;
   border-radius: 5px;
+  border: 1px solid black;
   margin: auto;
   margin-top: 10px;
   vertical-align: center;
   text-align: center;
 }
 
-.choice:hover {
+.notSelected {
+  background: lightgrey;
+}
+.notSelected:hover {
   background: grey;
   color: white;
+  cursor: pointer;
+}
+.selected {
+  background: green;
+  color: white;
+}
+.selected:hover {
+  cursor: pointer;
+}
+.click {
+  width: 100%;
 }
 
-.usersChoice: {
-  margin: 10px;
-  padding: 5px;
-  width: 25%;
+.nav {
+  width: 75%;
+  height: 40px;
+  background-color: #eee;
+  font-size: 0.8em;
   margin: auto;
 }
 
-.usersChoiceName: {
+.navEntry {
+  float: left;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.navEntry:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.usersChoice {
+  width: 40%;
+  font-weight: 800;
+  margin: auto;
+  text-align: center;
+  height: 60px;
+  margin-top: 15px;
+}
+
+.usersChoiceName {
   font-weight: 800;
 }

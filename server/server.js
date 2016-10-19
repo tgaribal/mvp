@@ -3,9 +3,8 @@ var parser = require('body-parser')
 var mongoose = require('mongoose');
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-// var createStore = require('redux').createStore;
-// var provider = require('redux-react').Provider;
-// var render = require('handleRender');
+var Promise = require('bluebird');
+
 
 var Initiative = require('./initiativeModel');
 var User = require('./userModel');
@@ -52,19 +51,24 @@ app.post('/users', function (req, res, next){
   var vote = req.body.vote;
   var username = req.body.user;
   var initiative = req.body.initiative
-  console.log("body", req.body)
-  // console.log(username)
-  // console.log(initiative)
-
   User.findOne({username: username})
   .exec(function (err, user) {
-    console.log(user);
-    user.votes[initiative] = vote;
-    console.log(user.votes)
-    res.send(201, user);
+    if (!user) {
+      console.log('not a valid user')
+    } else {
+      if (user.votes[initiative] === vote) {
+        delete user.votes[initiative]
+      } else {
+        user.votes[initiative] = vote;
+      }
+      User.update({_id: user._id}, { $set: { votes: user.votes}}, function(err, user) {
+        if (err) { console.log(err)};
+        res.send(user)
+      })
+    }
   })
 })
-
+  
 
 
 app.listen(port, function(err) {

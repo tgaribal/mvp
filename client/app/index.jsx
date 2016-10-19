@@ -1,1 +1,1 @@
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App server="http://localhost:8080"/>, document.getElementById('app'));

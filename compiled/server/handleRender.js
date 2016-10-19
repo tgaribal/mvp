@@ -1,0 +1,3 @@
+// var renderToString = requre('react-dom/server').renderToString;
+"use strict";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9oYW5kbGVSZW5kZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiaGFuZGxlUmVuZGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gdmFyIHJlbmRlclRvU3RyaW5nID0gcmVxdXJlKCdyZWFjdC1kb20vc2VydmVyJykucmVuZGVyVG9TdHJpbmc7XG5cbiJdfQ==

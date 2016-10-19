@@ -17,17 +17,17 @@ var Promise = require('bluebird');
 
   User = mongoose.model('users', UserSchema);
 
-  User.prototype.hashPassword = function (next) {
-    var cipher = Promise.promisify (bcrypt.hash);
-    return cipher(this.password, null, null).bind(this)
-    .then(function(hash) {
-      this.password = hash;
-      next();
-    })
-  }
+  // User.prototype.hashPassword = function (next) {
+  //   var cipher = Promise.promisify (bcrypt.hash);
+  //   return cipher(this.password, null, null).bind(this)
+  //   .then(function(hash) {
+  //     this.password = hash;
+  //     next();
+  //   })
+  // }
 
-  UserSchema.pre('save', function(next) {
-    this.hashPassword(next);
-  });
+  // UserSchema.pre('save', function(next) {
+  //   this.hashPassword(next);
+  // });
 
   module.exports = User;

@@ -3,15 +3,17 @@ class App extends React.Component {
     super(props);
     this.state = {
       initiatives: initiatives,
-      navFilter: 'Federal'
+      navFilter: 'Federal',
+      currentUser: 'tim'
     };
+    this.handleNavClick = this.handleNavClick.bind(this);
   }
 
   render () {
     return (
       <div>
         <div className="mainNav">
-          <Nav click={this.handleNavClick.bind(this)}/>
+          <Nav click={this.handleNavClick}/>
         </div>
 
         <div className="mainBody">
@@ -21,10 +23,15 @@ class App extends React.Component {
     );
   }
 
+  componentDidMount () {
+    $.get('http://localhost:8080/initiatives', function (data, res) {
+      this.setState({initiatives: data});;
+    }.bind(this));
+  }
+  
   handleNavClick (level) {
     console.log('click level:',level)
     this.setState({navFilter: level})
-    // this.render();
   }
 
 }

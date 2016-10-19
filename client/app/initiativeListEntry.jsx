@@ -7,12 +7,12 @@ class InitiativeListEntry extends React.Component {
       choice: undefined,
       numChoices: this.props.initiative.numChoices
     }
+    this.handleInitiativeChoiceSelection = this.handleInitiativeChoiceSelection.bind(this);
   }
 
   render() {
     return (
       <div className="initiativeListEntry"> 
-
         <div className="initiativeName">{this.props.initiative.name} 
           <span className="expand"> 
             <img onClick={this.handleHideClick} src="http://www.atlanticmach.com/expandDown.png"/> 
@@ -24,7 +24,7 @@ class InitiativeListEntry extends React.Component {
           <div className="initiativeDescription">{this.props.initiative.description}</div>
           <div className="initiativeChoices">
             {this.props.initiative.choices.map (choice =>
-              <InitiativeChoice choice={choice} click={this.handleInitiativeChoiceSelection.bind(this)}/>
+              <InitiativeChoice selection={this.state.choice} key={choice} choice={choice} click={this.handleInitiativeChoiceSelection}/>
             )}
           </div>
           <div className="usersChoice">Your choice: <div className="usersChoiceName">{this.state.choice}</div></div>
@@ -33,18 +33,35 @@ class InitiativeListEntry extends React.Component {
     );  
   }
 
+  componentDidMount () {
+
+    $.get('http://localhost:8080/users', function (data, res) {
+      this.setState({choice: data[0].votes[this.props.initiative.name]})
+    }.bind(this))
+  }
+
   handleHideClick () {
     this.setState({hidden: !this.state.hidden})
-    console.log(this.state.hidden)
   }
 
   handleInitiativeChoiceSelection (choice) {
     this.setState({
       choice: (this.state.choice === choice) ? undefined : choice,
     });
-    if (this.state.choice) {
-      $(this).addClass('voted');
-    }
+
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:8080/users',
+      data: JSON.stringify({
+        vote: choice,
+        initiative: this.props.initiative.name,
+        user: 'tim'
+      }),
+      contentType: 'application/JSON',
+      success: function () {
+        console.log('Post is complete');
+      }
+    })
   }
 
 }
